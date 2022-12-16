@@ -7,6 +7,13 @@ export default {
   args: {
     src: 'https://github.com/felipeolliveira.png',
     alt: 'Felipe Oliveira'
+  },
+  argTypes: {
+    src: {
+      control: {
+        type: 'text'
+      }
+    }
   }
 } as Meta<AvatarProps>
 

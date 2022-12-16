@@ -53,7 +53,7 @@ export const Button = styled('button', {
 
         '&:disabled': {
           color: '$gray200',
-          background: '$gray200'
+          borderColor: '$gray200'
         }
       },
       tertiary: {
@@ -85,3 +85,5 @@ export const Button = styled('button', {
 })
 
 export type ButtonProps = ComponentProps<typeof Button>
+
+Button.displayName = 'Button'

@@ -5,8 +5,31 @@ export default {
   title: 'Typography/Text',
   component: Text,
   args: {
+    size: 'md',
     children:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, veniam voluptatem laudantium, numquam optio similique enim magni perferendis minima sapiente quae iste aliquam? Quos dolorem necessitatibus ut fugit nesciunt amet.'
+  },
+  argTypes: {
+    size: {
+      options: [
+        'xxs',
+        'xs',
+        'sm',
+        'md',
+        'lg',
+        'xl',
+        '2xl',
+        '4xl',
+        '5xl',
+        '6xl',
+        '7xl',
+        '8xl',
+        '9xl'
+      ],
+      control: {
+        type: 'select'
+      }
+    }
   }
 } as Meta<TextProps>
 
