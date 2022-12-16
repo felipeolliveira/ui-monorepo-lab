@@ -1,0 +1,6 @@
+{
+  "extends": "@pypees-ui/ts-config/react.json",
+  "include": [
+    "src"
+  ],
+}

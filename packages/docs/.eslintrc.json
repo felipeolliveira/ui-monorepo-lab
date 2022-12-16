@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "@pypees-ui/eslint-config"
+  ]
+}
