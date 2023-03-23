@@ -22,8 +22,8 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
         
-      - run: npm ci
-      - run: npm run build
+      - name: Install dependences
+        run: npm ci
 
       - name: Publish to npm
         id: changesets
