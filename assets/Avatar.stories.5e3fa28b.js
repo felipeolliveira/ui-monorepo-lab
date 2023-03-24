@@ -1,0 +1,2 @@
+import{A as t}from"./index.41f50b07.js";import"./index.4cf6b402.js";import"./iframe.28e99f3f.js";import"./index.556830d8.js";import"./jsx-runtime.26b51b48.js";const e={title:"Data display/Avatar",component:t,args:{src:"https://github.com/felipeolliveira.png",alt:"Felipe Oliveira"},argTypes:{src:{control:{type:"text"}}}},p={},l={args:{src:void 0}},c=["Primary","WithFallback"];export{p as Primary,l as WithFallback,c as __namedExportsOrder,e as default};
+//# sourceMappingURL=Avatar.stories.5e3fa28b.js.map
