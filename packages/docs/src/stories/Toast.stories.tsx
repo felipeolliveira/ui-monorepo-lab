@@ -1,18 +1,20 @@
-import { Button, Toast, ToastProps, ToastProvider } from '@pypees-ui/react'
+import {
+  Button,
+  Toast,
+  ToastProps,
+  ToastProvider,
+  ToastProviderProps
+} from '@pypees-ui/react'
 import { Meta, StoryFn, StoryObj } from '@storybook/react'
 import { useState } from 'react'
 
 export default {
-  title: 'Notification/Toast',
-  component: Toast,
-  args: {
-    title: 'Title',
-    description:
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat natus vel earum iusto mollitia molestiae?'
-  }
+  title: 'Notification/Toast'
 } as Meta<ToastProps>
 
-export const Default: StoryFn<ToastProps> = (props) => {
+type DefaultProps = ToastProps & ToastProviderProps
+
+export const Default: StoryFn<DefaultProps> = (props) => {
   const [fireToast, setFireToast] = useState<number | undefined>()
 
   function handleToast() {
@@ -21,7 +23,7 @@ export const Default: StoryFn<ToastProps> = (props) => {
   }
 
   return (
-    <ToastProvider swipeDirection="left">
+    <ToastProvider duration={props.duration}>
       <Button variant="primary" onClick={handleToast}>
         Show toast
       </Button>
@@ -33,4 +35,21 @@ export const Default: StoryFn<ToastProps> = (props) => {
       />
     </ToastProvider>
   )
+}
+
+Default.args = {
+  title: 'Title',
+  description:
+    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat natus vel earum iusto mollitia molestiae?',
+  duration: 5000
+}
+Default.argTypes = {
+  duration: {
+    control: {
+      type: 'range',
+      min: 500,
+      max: 10000,
+      step: 500
+    }
+  }
 }

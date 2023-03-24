@@ -37,10 +37,10 @@ export function Toast(props: ToastProps) {
 }
 
 export function ToastProvider(props: ToastProviderProps) {
-  const { children } = props
+  const { children, ...provider } = props
 
   return (
-    <RadixToast.Provider>
+    <RadixToast.Provider {...provider}>
       {children}
 
       <ToastViewport />
